@@ -1,0 +1,8 @@
+output/
+__pycache__/
+*.pyc
+venv/
+pipeline.log
+__pycache__/
+
+pipeline.log
