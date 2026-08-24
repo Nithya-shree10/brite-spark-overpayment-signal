@@ -7,41 +7,48 @@ A machine learning solution for ranking suspicious benefit payments using unsupe
 ---
 
 ## Quick Start (How to Run)
+# Brite Spark 2026 — Overpayment Signal
 
-### Step 1: Navigate to the project folder
-Open your terminal (PowerShell on Windows, Terminal on Mac/Linux) and go into the project folder:
+### Step 1 — Open the project
 
-```bash
-cd 06-overpayment-signal
+Open the project folder in VS Code and open the terminal.
 
-Step 2: Set up a virtual environment (Recommended)
-bash
+### Step 2 — Go to the project folder
+
+```powershell
+cd ".\brite-spark-overpayment-signal-main"
+```
+
+### Step 3 — Create virtual environment
+
+```powershell
 python -m venv venv
+```
 
-On Windows:
-bash
-venv\Scripts\activate
+### Step 4 — Allow PowerShell activation
 
-On Mac/Linux:
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
 
-bash
-source venv/bin/activate
+### Step 5 — Activate virtual environment
 
-Step 3: Install dependencies
-bash
-python -m pip install --upgrade pip
+```powershell
+.\venv\Scripts\Activate.ps1
+```
 
-bash
+### Step 6 — Install dependencies
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+### Step 7 — Run the project
+
+```powershell
 python main.py
+```
 
-Step 5: View the results
+### Step 8 — Check results
 
-On Windows PowerShell:
-powershell
-Get-Content output\fairness_report.txt
-Get-Content output\model_limitations.txt
-
-On Mac/Linux:
-bash
-cat output/fairness_report.txt
-cat output/model_limitations.txt
+Results are generated in the `output/` folder.
