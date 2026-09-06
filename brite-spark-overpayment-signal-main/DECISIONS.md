@@ -108,7 +108,17 @@ While implementing the investigator feedback and preparing the final submission,
 
 The problem spec states that a straightforward model on the obvious features should flag one group at roughly 3x the base rate. Our submitted model (4 features, post day-two fix) showed a maximum disparity of 1.90x (district: Ash Hill) and 1.77x (tenure: Private tenancy) — short of that figure. This prompted a targeted investigation.
 
-**Diagnostic:** we retrained an otherwise-identical Isolation Forest model, restoring `adjustment_intensity` and `contact_intensity` — the two features removed in the day-two fix — and recomputed fairness on the result. (Code: `src/ml_ranker_diagnostic.py`, `diagnostic_run.py`; full output: `output/diagnostic_bias_investigation.txt`.)
+**Diagnostic:** we retrained an otherwise-identical Isolation Forest model, restoring `adjustment_intensity` and `contact_intensity` — the two features removed in the day-two fix — and recomputed fairness on the result. (Code: `diagnostic_run.py`; full output: `diagnostic_bias_investigation.txt`.)
+
+**Follow-up finding:** the day-two fix removes these two features from the ML model's
+inputs, but a separate post-processing step (`apply_investigator_feedback()` in
+`src/heuristic_ranker.py`) still uses raw `contact_attempts` as a penalty subtracted
+from every case's score. Since Other/Spanish-speaking residents average roughly 2x the
+contact attempts of English speakers, this penalty pushes them *down* the ranking —
+the likely reason "Other" shows 0/20 flags in the submitted model, versus 2.54x
+over-flagged in the diagnostic above. Same underlying signal, opposite direction
+depending on where it enters the pipeline. See `FINDING-inverted-sign-penalty.md` for
+the full write-up and a proposed (unapplied) fix.
 
 **Result:** `language_preference` disparity jumped from **1.15x (Fair)** to **2.54x (Significant Bias)** — close to the spec's ~3x figure. More strikingly, the affected group reversed entirely:
 
