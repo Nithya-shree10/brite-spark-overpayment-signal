@@ -1,0 +1,21 @@
+case_id,rank,risk_score,risk_score_normalized,monthly_award,district,age_band,language_preference,tenure,status
+C-32502,1,0.955,0.955,435.04,Calder Central,45-59,English,Private tenancy,Active
+C-32367,2,0.8723281088426187,0.8723281088426187,445.39,Calder Central,60-74,English,Private tenancy,Active
+C-33379,3,0.8593016120099458,0.8593016120099458,625.25,Northgate,30-44,English,Resident with family,Active
+C-34050,4,0.8469215728994228,0.8469215728994228,437.44,Weybridge,45-59,English,No fixed abode,Active
+C-30954,5,0.8208530262979572,0.8208530262979572,834.54,Ash Hill,60-74,English,Social tenancy,Active
+C-33181,6,0.8199589139101202,0.8199589139101202,768.87,Ash Hill,45-59,English,No fixed abode,Active
+C-32671,7,0.8189624489222638,0.8189624489222638,931.72,Weybridge,18-29,Spanish,Owner-occupier,Active
+C-31396,8,0.81852080782491,0.81852080782491,617.44,Northgate,30-44,English,No fixed abode,Active
+C-32400,9,0.813753403533063,0.813753403533063,405.4,Northgate,60-74,English,No fixed abode,Active
+C-33743,10,0.8093130855273428,0.8093130855273428,654.1,Calder Central,60-74,English,Resident with family,Active
+C-32962,11,0.7842434946815753,0.7842434946815753,1017.53,Calder Central,18-29,English,Private tenancy,Suspended
+C-31431,12,0.7784353243904111,0.7784353243904111,760.27,Calder Central,45-59,English,Owner-occupier,Active
+C-32431,13,0.7775518605239717,0.7775518605239717,900.41,Calder Central,30-44,English,No fixed abode,Active
+C-31298,14,0.7774754176875662,0.7774754176875662,746.45,Ash Hill,30-44,Spanish,Private tenancy,Active
+C-32368,15,0.7607183980395988,0.7607183980395988,528.79,Ash Hill,75+,English,Private tenancy,Active
+C-32404,16,0.7585980644128577,0.7585980644128577,765.8,Northgate,60-74,English,Private tenancy,Active
+C-32995,17,0.7574027525507459,0.7574027525507459,778.27,Calder Central,60-74,English,Resident with family,Active
+C-31956,18,0.7524639315324712,0.7524639315324712,552.7,Weybridge,30-44,English,Private tenancy,Active
+C-33099,19,0.738465454425084,0.738465454425084,424.99,Ash Hill,45-59,English,Resident with family,Closed
+C-30644,20,0.7350376581833846,0.7350376581833846,902.73,Ash Hill,45-59,English,Social tenancy,Suspended

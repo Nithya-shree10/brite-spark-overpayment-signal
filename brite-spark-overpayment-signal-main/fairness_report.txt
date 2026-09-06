@@ -1,0 +1,112 @@
+============================================================
+FAIRNESS ANALYSIS REPORT
+============================================================
+
+NOTE: Flagged set size is only 20 cases.
+   Per-group disparities should be read as directional signals,
+   not precise measurements. A 1-case shift changes a group's
+   flagged share by 5 percentage points.
+
+  district:
+    Max Disparity: 1.90
+    Status: Potential Bias
+    Population counts:
+      - Calder Central: 1433 cases (34.1%)
+      - Northgate: 1121 cases (26.7%)
+      - Weybridge: 983 cases (23.4%)
+      - Ash Hill: 663 cases (15.8%)
+    Flagged counts (top 20):
+      - Calder Central: 7 cases
+      - Ash Hill: 6 cases
+      - Northgate: 4 cases
+      - Weybridge: 3 cases
+    Under-represented groups (population >5% but <2% flags):
+      - None detected
+    Groups with higher flag rates:
+      - Ash Hill: 1.90x higher
+
+  age_band:
+    Max Disparity: 1.44
+    Status: Fair
+    Population counts:
+      - 30-44: 1112 cases (26.5%)
+      - 45-59: 992 cases (23.6%)
+      - 60-74: 874 cases (20.8%)
+      - 18-29: 701 cases (16.7%)
+      - 75+: 521 cases (12.4%)
+    Flagged counts (top 20):
+      - 45-59: 6 cases
+      - 60-74: 6 cases
+      - 30-44: 5 cases
+      - 18-29: 2 cases
+      - 75+: 1 cases
+    Under-represented groups (population >5% but <2% flags):
+      - None detected
+    No significant over-representation detected
+
+  language_preference:
+    Max Disparity: 1.15
+    Status: Fair
+    Population counts:
+      - English: 3277 cases (78.0%)
+      - Spanish: 510 cases (12.1%)
+      - Other: 413 cases (9.8%)
+    Flagged counts (top 20):
+      - English: 18 cases
+      - Spanish: 2 cases
+    Under-represented groups (population >5% but <2% flags):
+      - Other: 0 flags (9.8% of population)
+    No significant over-representation detected
+
+  tenure:
+    Max Disparity: 1.77
+    Status: Potential Bias
+    Population counts:
+      - Social tenancy: 876 cases (20.9%)
+      - No fixed abode: 855 cases (20.4%)
+      - Private tenancy: 830 cases (19.8%)
+      - Resident with family: 824 cases (19.6%)
+      - Owner-occupier: 815 cases (19.4%)
+    Flagged counts (top 20):
+      - Private tenancy: 7 cases
+      - No fixed abode: 5 cases
+      - Resident with family: 4 cases
+      - Social tenancy: 2 cases
+      - Owner-occupier: 2 cases
+    Under-represented groups (population >5% but <2% flags):
+      - None detected
+    Groups with higher flag rates:
+      - Private tenancy: 1.77x higher
+
+============================================================
+
+LIMITATIONS OF THIS FAIRNESS ANALYSIS:
+
+1. SELECTION RATE ONLY: This report measures who gets flagged,
+   not whether those flags are correct. Without ground-truth
+   labels, we cannot distinguish justified detection from bias.
+
+2. SMALL SAMPLE: With only 20 flagged cases, per-group
+   disparities are noisy and should be read as directional
+   signals, not precise measurements.
+
+3. UNDER-REPRESENTATION: Some groups may receive zero or very
+   few flags despite meaningful population share. See the
+   per-field breakdown above for specifics.
+
+============================================================
+
+RECOMMENDATIONS:
+
+1. Elevated flag rates observed for: Ash Hill (district, 1.90x), Private tenancy (tenure, 1.77x).
+   These groups warrant closer investigator attention.
+
+2. Investigate under-flagging for: Other (language_preference, 0 flags, 9.8% of population).
+   These groups received disproportionately few flags relative
+   to population share.
+
+3. This model should NOT be used for automatic decisions.
+
+4. Human review is mandatory for all flagged cases.
+
+============================================================

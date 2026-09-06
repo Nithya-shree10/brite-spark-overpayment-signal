@@ -1,0 +1,466 @@
+[
+  {
+    "case_id": "C-32502",
+    "rank": 1,
+    "risk_score": 0.955,
+    "reason": "Payment mismatch is high (1.33); Transfer payment ratio is low (33%)",
+    "top_features": [
+      {
+        "feature": "payment_mismatch",
+        "value": 1.3271412408647525,
+        "z_score": 14.846803658737961,
+        "direction": "high",
+        "magnitude": 14.846803658737961,
+        "percentile": 0.7930951745213785
+      },
+      {
+        "feature": "transfer_ratio",
+        "value": 0.3333333333333333,
+        "z_score": -2.243106631473153,
+        "direction": "low",
+        "magnitude": 2.243106631473153,
+        "percentile": 0.3333333333333333
+      }
+    ]
+  },
+  {
+    "case_id": "C-32367",
+    "rank": 2,
+    "risk_score": 0.8723281088426187,
+    "reason": "Payment mismatch is high (1.28); Months since review is low (0 months)",
+    "top_features": [
+      {
+        "feature": "payment_mismatch",
+        "value": 1.2843365666793614,
+        "z_score": 14.355470113414098,
+        "direction": "high",
+        "magnitude": 14.355470113414098,
+        "percentile": 0.767515244143152
+      },
+      {
+        "feature": "months_since_review",
+        "value": 0,
+        "z_score": -1.684208193141507,
+        "direction": "low",
+        "magnitude": 1.684208193141507,
+        "percentile": 0.0
+      }
+    ]
+  },
+  {
+    "case_id": "C-33379",
+    "rank": 3,
+    "risk_score": 0.8593016120099458,
+    "reason": "Payment mismatch is high (1.19); Months since review is low (0 months)",
+    "top_features": [
+      {
+        "feature": "payment_mismatch",
+        "value": 1.1927425149700597,
+        "z_score": 13.304107592536234,
+        "direction": "high",
+        "magnitude": 13.304107592536234,
+        "percentile": 0.7127789446531478
+      },
+      {
+        "feature": "months_since_review",
+        "value": 0,
+        "z_score": -1.684208193141507,
+        "direction": "low",
+        "magnitude": 1.684208193141507,
+        "percentile": 0.0
+      }
+    ]
+  },
+  {
+    "case_id": "C-34050",
+    "rank": 4,
+    "risk_score": 0.8469215728994228,
+    "reason": "Payment mismatch is high (1.41); Months since review is high (23 months)",
+    "top_features": [
+      {
+        "feature": "payment_mismatch",
+        "value": 1.413834656205334,
+        "z_score": 15.841914214445909,
+        "direction": "high",
+        "magnitude": 15.841914214445909,
+        "percentile": 0.8449028700795334
+      },
+      {
+        "feature": "months_since_review",
+        "value": 23,
+        "z_score": 1.6828139810610918,
+        "direction": "high",
+        "magnitude": 1.6828139810610918,
+        "percentile": 1.0
+      }
+    ]
+  },
+  {
+    "case_id": "C-30954",
+    "rank": 5,
+    "risk_score": 0.8208530262979572,
+    "reason": "Payment mismatch is high (1.07); Months since review is low (3 months)",
+    "top_features": [
+      {
+        "feature": "payment_mismatch",
+        "value": 1.0712632947953817,
+        "z_score": 11.909708100716873,
+        "direction": "high",
+        "magnitude": 11.909708100716873,
+        "percentile": 0.6401833682679396
+      },
+      {
+        "feature": "months_since_review",
+        "value": 3,
+        "z_score": -1.2450313878107333,
+        "direction": "low",
+        "magnitude": 1.2450313878107333,
+        "percentile": 0.13043478260869565
+      }
+    ]
+  },
+  {
+    "case_id": "C-33181",
+    "rank": 6,
+    "risk_score": 0.8199589139101202,
+    "reason": "Payment mismatch is high (0.83); Months since review is low (0 months)",
+    "top_features": [
+      {
+        "feature": "payment_mismatch",
+        "value": 0.8320387424716726,
+        "z_score": 9.163768558865689,
+        "direction": "high",
+        "magnitude": 9.163768558865689,
+        "percentile": 0.4972235745150563
+      },
+      {
+        "feature": "months_since_review",
+        "value": 0,
+        "z_score": -1.684208193141507,
+        "direction": "low",
+        "magnitude": 1.684208193141507,
+        "percentile": 0.0
+      }
+    ]
+  },
+  {
+    "case_id": "C-32671",
+    "rank": 7,
+    "risk_score": 0.8189624489222638,
+    "reason": "Payment mismatch is high (0.74); Months since review is low (0 months)",
+    "top_features": [
+      {
+        "feature": "payment_mismatch",
+        "value": 0.7441711696257541,
+        "z_score": 8.155180433690278,
+        "direction": "high",
+        "magnitude": 8.155180433690278,
+        "percentile": 0.444714206351954
+      },
+      {
+        "feature": "months_since_review",
+        "value": 0,
+        "z_score": -1.684208193141507,
+        "direction": "low",
+        "magnitude": 1.684208193141507,
+        "percentile": 0.0
+      }
+    ]
+  },
+  {
+    "case_id": "C-31396",
+    "rank": 8,
+    "risk_score": 0.81852080782491,
+    "reason": "Payment mismatch is high (1.24); Transfer payment ratio is high (100%)",
+    "top_features": [
+      {
+        "feature": "payment_mismatch",
+        "value": 1.238387447987409,
+        "z_score": 13.828043055012868,
+        "direction": "high",
+        "magnitude": 13.828043055012868,
+        "percentile": 0.7400562042263815
+      },
+      {
+        "feature": "transfer_ratio",
+        "value": 1.0,
+        "z_score": 1.3633088895173997,
+        "direction": "high",
+        "magnitude": 1.3633088895173997,
+        "percentile": 1.0
+      }
+    ]
+  },
+  {
+    "case_id": "C-32400",
+    "rank": 9,
+    "risk_score": 0.813753403533063,
+    "reason": "Payment mismatch is high (1.48); Award-to-needs ratio is low (33%)",
+    "top_features": [
+      {
+        "feature": "payment_mismatch",
+        "value": 1.4819676837270341,
+        "z_score": 16.623979318385196,
+        "direction": "high",
+        "magnitude": 16.623979318385196,
+        "percentile": 0.885618939845991
+      },
+      {
+        "feature": "award_to_needs_ratio",
+        "value": 0.3269354838709677,
+        "z_score": -1.4431375289073196,
+        "direction": "low",
+        "magnitude": 1.4431375289073196,
+        "percentile": 0.08386743036689603
+      }
+    ]
+  },
+  {
+    "case_id": "C-33743",
+    "rank": 10,
+    "risk_score": 0.8093130855273428,
+    "reason": "Payment mismatch is high (1.51); Award-to-needs ratio is low (33%)",
+    "top_features": [
+      {
+        "feature": "payment_mismatch",
+        "value": 1.5121024779931815,
+        "z_score": 16.96988161962137,
+        "direction": "high",
+        "magnitude": 16.96988161962137,
+        "percentile": 0.9036273922862929
+      },
+      {
+        "feature": "award_to_needs_ratio",
+        "value": 0.32705,
+        "z_score": -1.4418921964343971,
+        "direction": "low",
+        "magnitude": 1.4418921964343971,
+        "percentile": 0.0842254250394934
+      }
+    ]
+  },
+  {
+    "case_id": "C-32962",
+    "rank": 11,
+    "risk_score": 0.7842434946815753,
+    "reason": "Payment mismatch is high (0.81); Transfer payment ratio is high (100%)",
+    "top_features": [
+      {
+        "feature": "payment_mismatch",
+        "value": 0.8078783475531731,
+        "z_score": 8.886443413478123,
+        "direction": "high",
+        "magnitude": 8.886443413478123,
+        "percentile": 0.48278540317776336
+      },
+      {
+        "feature": "transfer_ratio",
+        "value": 1.0,
+        "z_score": 1.3633088895173997,
+        "direction": "high",
+        "magnitude": 1.3633088895173997,
+        "percentile": 1.0
+      }
+    ]
+  },
+  {
+    "case_id": "C-31431",
+    "rank": 12,
+    "risk_score": 0.7784353243904111,
+    "reason": "Payment mismatch is high (0.35); Award-to-needs ratio is high (61%)",
+    "top_features": [
+      {
+        "feature": "payment_mismatch",
+        "value": 0.35318612318888193,
+        "z_score": 3.6672577315474526,
+        "direction": "high",
+        "magnitude": 3.6672577315474526,
+        "percentile": 0.2110628480104335
+      },
+      {
+        "feature": "award_to_needs_ratio",
+        "value": 0.6131209677419355,
+        "z_score": 1.6690535602888183,
+        "direction": "high",
+        "magnitude": 1.6690535602888183,
+        "percentile": 0.9785263702583495
+      }
+    ]
+  },
+  {
+    "case_id": "C-32431",
+    "rank": 13,
+    "risk_score": 0.7775518605239717,
+    "reason": "Payment mismatch is high (0.54); Months since review is high (23 months)",
+    "top_features": [
+      {
+        "feature": "payment_mismatch",
+        "value": 0.5368811084855948,
+        "z_score": 5.775801018038635,
+        "direction": "high",
+        "magnitude": 5.775801018038635,
+        "percentile": 0.32083835790843795
+      },
+      {
+        "feature": "months_since_review",
+        "value": 23,
+        "z_score": 1.6828139810610918,
+        "direction": "high",
+        "magnitude": 1.6828139810610918,
+        "percentile": 1.0
+      }
+    ]
+  },
+  {
+    "case_id": "C-31298",
+    "rank": 14,
+    "risk_score": 0.7774754176875662,
+    "reason": "Payment mismatch is high (1.67); Award-to-needs ratio is low (32%)",
+    "top_features": [
+      {
+        "feature": "payment_mismatch",
+        "value": 1.673369456150913,
+        "z_score": 18.8209849776034,
+        "direction": "high",
+        "magnitude": 18.8209849776034,
+        "percentile": 1.0
+      },
+      {
+        "feature": "award_to_needs_ratio",
+        "value": 0.3203648068669528,
+        "z_score": -1.5145918953038386,
+        "direction": "low",
+        "magnitude": 1.5145918953038386,
+        "percentile": 0.0633265041002389
+      }
+    ]
+  },
+  {
+    "case_id": "C-32368",
+    "rank": 15,
+    "risk_score": 0.7607183980395988,
+    "reason": "Payment mismatch is high (1.01) [context: 3 adjustments (Department activity)]",
+    "top_features": [
+      {
+        "feature": "payment_mismatch",
+        "value": 1.006543473200073,
+        "z_score": 11.166821488394435,
+        "direction": "high",
+        "magnitude": 11.166821488394435,
+        "percentile": 0.6015070189671837
+      }
+    ]
+  },
+  {
+    "case_id": "C-32404",
+    "rank": 16,
+    "risk_score": 0.7585980644128577,
+    "reason": "Payment mismatch is high (0.33); Award-to-needs ratio is high (62%)",
+    "top_features": [
+      {
+        "feature": "payment_mismatch",
+        "value": 0.3276517127456096,
+        "z_score": 3.3741609459835646,
+        "direction": "high",
+        "magnitude": 3.3741609459835646,
+        "percentile": 0.19580356958305825
+      },
+      {
+        "feature": "award_to_needs_ratio",
+        "value": 0.6175806451612903,
+        "z_score": 1.7175513671568392,
+        "direction": "high",
+        "magnitude": 1.7175513671568392,
+        "percentile": 0.9924679937756932
+      }
+    ]
+  },
+  {
+    "case_id": "C-32995",
+    "rank": 17,
+    "risk_score": 0.7574027525507459,
+    "reason": "Payment mismatch is high (1.43); Award-to-needs ratio is low (33%)",
+    "top_features": [
+      {
+        "feature": "payment_mismatch",
+        "value": 1.4250901484722882,
+        "z_score": 15.971110406804156,
+        "direction": "high",
+        "magnitude": 15.971110406804156,
+        "percentile": 0.8516291146787649
+      },
+      {
+        "feature": "award_to_needs_ratio",
+        "value": 0.3340214592274678,
+        "z_score": -1.3660794298574532,
+        "direction": "low",
+        "magnitude": 1.3660794298574532,
+        "percentile": 0.10601925691936234
+      }
+    ]
+  },
+  {
+    "case_id": "C-31956",
+    "rank": 18,
+    "risk_score": 0.7524639315324712,
+    "reason": "Payment mismatch is high (0.87)",
+    "top_features": [
+      {
+        "feature": "payment_mismatch",
+        "value": 0.8719703810727829,
+        "z_score": 9.622123959014274,
+        "direction": "high",
+        "magnitude": 9.622123959014274,
+        "percentile": 0.5210865884205217
+      }
+    ]
+  },
+  {
+    "case_id": "C-33099",
+    "rank": 19,
+    "risk_score": 0.738465454425084,
+    "reason": "Transfer payment ratio is low (0%); Months since review is low (0 months)",
+    "top_features": [
+      {
+        "feature": "transfer_ratio",
+        "value": 0.0,
+        "z_score": -4.046314391968429,
+        "direction": "low",
+        "magnitude": 4.046314391968429,
+        "percentile": 0.0
+      },
+      {
+        "feature": "months_since_review",
+        "value": 0,
+        "z_score": -1.684208193141507,
+        "direction": "low",
+        "magnitude": 1.684208193141507,
+        "percentile": 0.0
+      }
+    ]
+  },
+  {
+    "case_id": "C-30644",
+    "rank": 20,
+    "risk_score": 0.7350376581833846,
+    "reason": "Payment mismatch is high (1.07); Transfer payment ratio is low (50%) [context: 3 adjustments (Department activity); 6 contact attempts (communication)]",
+    "top_features": [
+      {
+        "feature": "payment_mismatch",
+        "value": 1.0696742021031354,
+        "z_score": 11.89146769680799,
+        "direction": "high",
+        "magnitude": 11.89146769680799,
+        "percentile": 0.6392337317806682
+      },
+      {
+        "feature": "transfer_ratio",
+        "value": 0.5,
+        "z_score": -1.3415027512255147,
+        "direction": "low",
+        "magnitude": 1.3415027512255147,
+        "percentile": 0.5
+      }
+    ]
+  }
+]

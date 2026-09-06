@@ -1,0 +1,98 @@
+============================================================
+MODEL LIMITATIONS AND BOUNDARIES
+============================================================
+
+## GOVERNANCE POLICY - What This Model Must Never Do
+
+### AUTOMATIC DECISIONS
+This model must NEVER be used to automatically approve, deny, suspend,
+or terminate any benefit or service. Every case flagged by this model
+requires human review.
+
+### SOLE BASIS FOR ACTION
+This model must NEVER be the sole basis for any action. It is a triage
+tool to help investigators prioritize their work, not a replacement
+for professional judgment.
+
+### FINANCIAL DECISIONS
+This model must NEVER be used to make financial decisions or calculate
+benefit amounts.
+
+### DISCRIMINATORY USE
+This model must NEVER be used to target specific demographic groups.
+If bias is detected, the model must be retrained.
+
+### EXTERNAL USE
+This model must NEVER be shared with or used by external organizations
+without explicit approval.
+
+============================================================
+
+## TECHNICAL LIMITATIONS - Known Gaps in This Implementation
+
+### 1. EXPLANATIONS ARE HEURISTIC, NOT MODEL-DERIVED
+The plain-language explanations identify which of the 4 model features
+is most extreme for each case. However, Isolation Forest does not
+provide per-feature attribution the way tree classifiers do. The
+explanations are a reasonable approximation, not a true derivation
+from model internals.
+
+### 2. FAIRNESS METRICS MEASURE SELECTION RATE ONLY
+The fairness analysis compares who gets flagged (selection rate) across
+demographic groups. It does NOT compare error rates (false positive/
+false negative rates by group) because we do not have ground-truth
+labels. We cannot distinguish justified detection from bias.
+
+### 3. SMALL SAMPLE SIZE IN FLAGGED SET (n=20)
+All fairness comparisons are based on only 20 flagged cases. A single
+case moving between groups changes a group's flagged share by 5
+percentage points. Per-group disparities should be read as directional
+signals, not precise measurements.
+
+### 4. UNDER-REPRESENTATION AND BIAS INVESTIGATION
+In our submitted model, 'Other' language speakers (9.8% of population)
+received 0 of 20 flags. A diagnostic check (see DECISIONS.md and
+output/diagnostic_bias_investigation.txt) found that restoring two
+features removed during the day-two fix reverses this: 'Other' speakers
+become the MOST over-flagged group, at 2.54x the base rate. This suggests
+the demographic signal in this data runs substantially through
+administrative-activity features we removed for a separate, legitimate
+reason. See DECISIONS.md for full discussion.
+
+### 5. DATA VALIDATION UNTESTED
+The synthetic data provided had no missing values or quality issues,
+so the validation/cleaning logic was not stress-tested. In production
+with real data, more robust cleaning would be needed.
+
+============================================================
+
+## WHAT WE WOULD FIX FIRST WITH MORE TIME
+
+1. Outcome Labels: Obtain ground-truth labels to compute false
+   positive/false negative rates by demographic group.
+
+2. Larger Flagged Set: Increase to top 50 cases for more stable
+   fairness statistics.
+
+3. Model-Derived Explanations: Replace heuristic explanations with
+   model-agnostic attribution methods (LIME, SHAP).
+
+4. Resolve the Bias Investigation Tension: determine whether
+   adjustment_intensity and contact_intensity reflect legitimate
+   Department workload or investigator bias, so they can be safely
+   restored, redesigned, or confidently left out. See DECISIONS.md.
+
+============================================================
+
+## WHAT WOULD NEED TO BE TRUE BEFORE DEPLOYMENT
+
+1. Fairness validation on real-world data (not synthetic)
+2. Independent audit of model outputs
+3. Clear appeals process for flagged cases
+4. Regular bias monitoring and retraining schedule
+5. Transparent reporting of false positive rates
+6. Human oversight at all stages
+7. Legal and ethical review
+8. Stakeholder consultation with affected communities
+
+============================================================
